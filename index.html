@@ -21,26 +21,27 @@
 </head>
 
 <body>
-    <!-- Top Bar with Shipping Info -->
+    
+
+    <!-- barra de cima with Shipping Info -->
+    
     <div class="top-bar">
-        <div class="top-bar-content">
-            <div class="free-shipping">
-                <i class="fas fa-truck"></i>
-                <span>Frete grátis Centro–Oeste em compras acima de</span>
-                <span class="price-tag">R$250</span>
-            </div>
+        <div class="top-message active">
+            <i class="fas fa-truck"></i>
+            <span>🚀 Navegue pela loja para conhecer novos produtos</span>
         </div>
     </div>
 
-    <!-- Main Navigation -->
+    <!-- menu de Navegação -->
     <nav class="navbar">
         <div class="nav-container">
-            <div class="logo">
-                <img src="logo.png"
-                    alt="Logo Hmx Labs - Ilustração estilizada de um átomo com efeito neon" class="logo-img">
-
-            </div>
-
+            <!-- Logo que volta pra página inicial -->
+             <div class="logo">
+                <a href="index.html">
+            <img src="logo.png" alt="Logo HMX Labs" class="logo-img">
+            </a>
+             </div>
+            
             <div class="nav-links">
                 <div class="dropdown">
                     <a href="#" class="nav-item has-dropdown">Categorias</a>
@@ -49,7 +50,7 @@
                         <a href="#" class="dropdown-item">Creatina</a>
                         <a href="#" class="dropdown-item">Pré-Treino</a>
                         <a href="#" class="dropdown-item">Hipercalóricos</a>
-                        <a href="#" class="dropdown-item">Termogênicos</a>
+                        <a href="termogenico.html" class="dropdown-item">Termogênicos</a>
                     </div>
                 </div>
 
@@ -82,16 +83,18 @@
             <div class="search-container">
                 <i class="fas fa-search search-icon"></i>
                 <input type="text" class="search-input" placeholder="O que você procura?">
+                <img src="lupa2.png" class="img-lupa">
             </div>
 
             <div class="nav-actions">
                 <div class="nav-icon-container" style="position: relative;">
                     <i class="fas fa-user nav-icon"></i>
                 </div>
-                <div class="nav-icon-container" style="position: relative;">
-                    <i class="fas fa-shopping-cart nav-icon"></i>
-                    <span class="cart-count">0</span>
-                </div>
+                <a href="pagina_do_carrinho.html" class="botao-carrinho">
+                <img src="carrinho de compras-2.png" alt="carrinho" />
+                <div class="bolinha">3</div> <!-- Número de itens -->
+                </a>
+
             </div>
         </div>
     </nav>
@@ -111,17 +114,17 @@
                 </div>
             </div>
             <div class="carousel-slide">
-                <img src="banner-creatina.png" alt="Praia tropical com areia branca, água cristalina em tons de azul e coqueiros à beira-mar">
+                <img src="Design sem nome (4).png" alt="Praia tropical com areia branca, água cristalina em tons de azul e coqueiros à beira-mar">
                 <div class="carousel-caption">
                     <h3></h3>
                     <p></p>
                 </div>
             </div>
             <div class="carousel-slide">
-                <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/8cac0e48-d698-4c80-abfd-af462d7d9904.png" alt="Cidade metropolitana movimentada à noite com arranha-céus iluminados e luzes de néon">
+                <img src="FOTO PNG PRODUTO.png" alt="Cidade metropolitana movimentada à noite com arranha-céus iluminados e luzes de néon">
                 <div class="carousel-caption">
-                    <h3>Cidade Iluminada</h3>
-                    <p>A energia vibrante da vida urbana noturna</p>
+                    <h3></h3>
+                    <p></p>
                 </div>
             </div>
         </div>
@@ -148,29 +151,37 @@
         
         <div class="products-carousel" id="productsCarousel">
             <!-- Produto 1 -->
-            <div class="product-card">
+             </a href="whey.html" class="product-link">
+             <div class="product-card">
                 <div class="discount-label">5% OFF</div>
-                <img src="https://placehold.co/257x267" alt="Produto 1" class="product-image">
+                <img src="whey-chocolate.png" alt="Produto 1" class="product-image">
                 <div class="product-info">
-                    <h3 class="product-name">KIT MÁXIMO SABOR</h3>
-                    <p class="product-price-old">R$ 189,80</p>
-                    <p class="product-price-new">R$ 179,90</p>
-                    <p class="installments">ou 3x de R$ 59,96 sem juros</p>
+                    <h3 class="product-name">WHEY PROTEIN 100% <br> HMX LABS</h3>
+                    <p class="product-price-old">R$ 149,80</p>
+                    <p class="product-price-new">R$ 129,90</p>
+                    <p class="installments">ou 3x de R$ 43,30 sem juros</p>
                     <button class="buy-button">Comprar</button>
                 </div>
             </div>
+            
+            </a>
+           
+            
             <!-- Produto 2 -->
-            <div class="product-card">
-                <div class="discount-label">5% OFF</div>
-                <img src="Termogenico.png" alt=" TERMOGÊNICO Thermo Fury 120 CAPSULAS - HMX LABS" class="product-image">
-                <div class="product-info">
-                    <h3 class="product-name">TERMOGÊNICO THERMO BURN <br>120 CAPSULAS - HMX LABS</h3>
-                    <p class="product-price-old">R$ 299,90</p>
-                    <p class="product-price-new">R$ 249,90</p>
-                    <p class="installments">ou 3x de R$ 83,30 sem juros</p>
-                    <button class="buy-button">Comprar</button>
+             <a href="termogenico.html" class="product-link">
+               <div class="product-card">
+                  <div class="discount-label">16% OFF</div>
+                  <img src="Termogenico.png" alt="TERMOGÊNICO Thermo Fury 120 CAPSULAS - HMX LABS" class="product-image">
+                 <div class="product-info">
+                  <h3 class="product-name">TERMOGÊNICO THERMO BURN <br>120 CAPSULAS - HMX LABS</h3>
+                 <p class="product-price-old">R$ 59,90</p>
+                 <p class="product-price-new">R$ 49,90</p>
+                 <p class="installments">ou 3x de R$ 16,63 sem juros</p>
+                 <button class="buy-button">Comprar</button>
+                 </div>
                 </div>
-            </div>
+            </a>
+
             <!-- Produto 3 -->
             <div class="product-card">
                 <div class="discount-label">5% OFF</div>
@@ -272,99 +283,44 @@
         <div class="custom-scrollbar" id="customScrollbar">
             <div class="scroll-thumb" id="scrollThumb"></div>
         </div>
-    </div>
-
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const carousel = document.getElementById('productsCarousel');
-            const scrollThumb = document.getElementById('scrollThumb');
-            const customScrollbar = document.getElementById('customScrollbar');
-            
-            // Calcula a largura do thumb baseado na proporção do conteúdo
-            function updateThumb() {
-                const scrollWidth = carousel.scrollWidth;
-                const clientWidth = carousel.clientWidth;
-                const thumbWidth = (clientWidth / scrollWidth) * customScrollbar.offsetWidth;
-                
-                // Define tamanho mínimo para o thumb
-                scrollThumb.style.width = Math.max(thumbWidth, 30) + 'px';
-            }
-            
-            // Atualiza a posição do thumb conforme o scroll
-            function updateThumbPosition() {
-                const scrollLeft = carousel.scrollLeft;
-                const maxScrollLeft = carousel.scrollWidth - carousel.clientWidth;
-                const thumbPosition = (scrollLeft / maxScrollLeft) * (customScrollbar.offsetWidth - scrollThumb.offsetWidth);
-                
-                scrollThumb.style.transform = `translateX(${thumbPosition}px)`;
-            }
-            
-            // Permite arrastar o thumb para mover o carrossel
-            let isDragging = false;
-            let startX;
-            let startScrollLeft;
-            
-            scrollThumb.addEventListener('mousedown', function(e) {
-                isDragging = true;
-                startX = e.clientX;
-                startScrollLeft = carousel.scrollLeft;
-                document.body.style.cursor = 'grabbing';
-                e.preventDefault();
-            });
-            
-            document.addEventListener('mousemove', function(e) {
-                if (!isDragging) return;
-                
-                const deltaX = e.clientX - startX;
-                const scrollDelta = deltaX * (carousel.scrollWidth / customScrollbar.offsetWidth);
-                
-                carousel.scrollLeft = startScrollLeft + scrollDelta;
-                e.preventDefault();
-            });
-            
-            document.addEventListener('mouseup', function() {
-                isDragging = false;
-                document.body.style.cursor = '';
-            });
-            
-            // Permite clicar na barra para mover o thumb
-            customScrollbar.addEventListener('click', function(e) {
-                if (e.target === scrollThumb) return;
-                
-                const clickX = e.clientX - customScrollbar.getBoundingClientRect().left;
-                const thumbCenter = scrollThumb.offsetWidth / 2;
-                const clickPercentage = clickX / customScrollbar.offsetWidth;
-                
-                // Move o thumb para a posição clicada (centralizando)
-                const scrollLeft = (clickPercentage * carousel.scrollWidth) - (carousel.clientWidth / 2);
-                
-                carousel.scrollTo({
-                    left: scrollLeft,
-                    behavior: 'smooth'
-                });
-            });
-            
-            // Atualiza quando o carrossel é rolado
-            carousel.addEventListener('scroll', function() {
-                if (!isDragging) {
-                    updateThumbPosition();
-                }
-            });
-            
-            // Atualiza quando a janela é redimensionada
-            window.addEventListener('resize', function() {
-                updateThumb();
-                updateThumbPosition();
-            });
-            
-            // Inicializa
-            updateThumb();
-            updateThumbPosition();
-        });
-    </script>
-</body>
-</html>
-
+    </div>    
+    </body>
+    </html>
         </div>
      </nav>
+     <!-- rodape -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-column">
+                <h3>HMX Labs</h3>
+                <p>Transformando vidas através de suplementos de alta qualidade desde 2015.</p>
+            </div>
+
+            <div class="footer-column">
+                <h3>Links Rápidos</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="produtos.html">Produtos</a></li>
+                    <li><a href="quem-somos.html">Quem Somos</a></li>
+                    <li><a href="contato.html">Contato</a></li>
+                    <li><a href="politica-privacidade.html">Política de Privacidade</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h3>Contato</h3>
+                <ul>
+                    <li><i class="fas fa-phone"></i> (31) 4002-8922</li>
+                    <li><i class="fas fa-envelope"></i> contato@hmxlabs.com.br</li>
+                    <li><i class="fas fa-map-marker-alt"></i> Av. Cristiano Machado, 1000 - Belo Horizonte/MG</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p class="copyright">&copy; 2025 HMX Labs. Todos os direitos reservados. CNPJ: 12.345.678/0001-00</p>
+        </div>
+    </footer>
+</body>
+</html>
 </html>
