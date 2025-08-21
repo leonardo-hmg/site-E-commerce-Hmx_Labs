@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contato - HMX Labs</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        body {
+            background-color: #000;
+            color: #fff;
+            line-height: 1.6;
+        }
+
+        /* Header */
+        header {
+            background-color: #181616;
+            padding: 20px 0;
+            border-bottom: 2px solid #E50914;
+        }
+
+        .header-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo img {
+            height: 50px;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 20px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #E50914;
+        }
+
+        /* Main Content */
+        .contact-container {
+            max-width: 1200px;
+            margin: 50px auto;
+            padding: 0 20px;
+        }
+
+        .contact-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .contact-title {
+            font-size: 32px;
+            color: #E50914;
+            margin-bottom: 10px;
+        }
+
+        .contact-subtitle {
+            color: #888;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .contact-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+        }
+
+        .contact-info {
+            background-color: #181616;
+            padding: 30px;
+            border-radius: 8px;
+        }
+
+        .info-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 25px;
+        }
+
+        .info-icon {
+            color: #E50914;
+            font-size: 24px;
+            margin-right: 15px;
+            margin-top: 5px;
+        }
+
+        .info-text h3 {
+            font-size: 18px;
+            margin-bottom: 5px;
+        }
+
+        .info-text p, .info-text a {
+            color: #ccc;
+            text-decoration: none;
+        }
+
+        .info-text a:hover {
+            color: #E50914;
+        }
+
+        .contact-form {
+            background-color: #181616;
+            padding: 30px;
+            border-radius: 8px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 12px;
+            background-color: #111;
+            border: 1px solid #333;
+            border-radius: 4px;
+            color: #fff;
+            font-size: 16px;
+        }
+
+        textarea.form-control {
+            min-height: 150px;
+            resize: vertical;
+        }
+
+        .submit-btn {
+            background-color: #E50914;
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 4px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .submit-btn:hover {
+            background-color: #c40812;
+        }
+
+        /* Map Section */
+        .map-section {
+            margin-top: 50px;
+            text-align: center;
+        }
+
+        .map-title {
+            font-size: 24px;
+            color: #E50914;
+            margin-bottom: 20px;
+        }
+
+        .map-container {
+            height: 400px;
+            background-color: #181616;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .map-container iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        /* Footer */
+        .footer {
+            background-color: #181616;
+            padding: 50px 0 20px;
+            margin-top: 50px;
+            border-top: 2px solid #E50914;
+        }
+
+        .footer-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+        }
+
+        .footer-column h3 {
+            color: #E50914;
+            font-size: 18px;
+            margin-bottom: 20px;
+            position: relative;
+            padding-bottom: 10px;
+        }
+
+        .footer-column h3::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 50px;
+            height: 2px;
+            background-color: #E50914;
+        }
+
+        .footer-column ul {
+            list-style: none;
+        }
+
+        .footer-column ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-column ul li a {
+            color: #fff;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .footer-column ul li a:hover {
+            color: #E50914;
+        }
+
+        .footer-column p {
+            margin-bottom: 10px;
+            color: #ccc;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 15px;
+        }
+
+        .social-links a {
+            color: #fff;
+            font-size: 20px;
+            transition: color 0.3s;
+        }
+
+        .social-links a:hover {
+            color: #E50914;
+        }
+
+        .footer-bottom {
+            background-color: #111;
+            padding: 20px 0;
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        .copyright {
+            font-size: 14px;
+            color: #888;
+        }
+
+        /* Responsivo */
+        @media (max-width: 768px) {
+            .contact-content {
+                grid-template-columns: 1fr;
+            }
+
+            .header-container {
+                flex-direction: column;
+            }
+
+            nav ul {
+                margin-top: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="logo.png" alt="HMX Labs">
+                </a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="produtos.html">Produtos</a></li>
+                    <li><a href="quem-somos.html">Quem Somos</a></li>
+                    <li><a href="contato.html">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <div class="contact-container">
+            <div class="contact-header">
+                <h1 class="contact-title">FALE CONOSCO</h1>
+                <p class="contact-subtitle">Tem alguma dúvida, sugestão ou reclamação? Entre em contato conosco através do formulário abaixo ou pelos nossos outros canais de atendimento.</p>
+            </div>
+
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="info-item">
+                        <i class="fas fa-map-marker-alt info-icon"></i>
+                        <div class="info-text">
+                            <h3>Endereço</h3>
+                            <p>Av. Paulista, 1000<br>São Paulo - SP<br>CEP: 01310-100</p>
+                        </div>
+                    </div>
+
+                    <div class="info-item">
+                        <i class="fas fa-phone-alt info-icon"></i>
+                        <div class="info-text">
+                            <h3>Telefone</h3>
+                            <p><a href="tel:+551140028922">(11) 4002-8922</a></p>
+                        </div>
+                    </div>
+
+                    <div class="info-item">
+                        <i class="fas fa-envelope info-icon"></i>
+                        <div class="info-text">
+                            <h3>Email</h3>
+                            <p><a href="mailto:contato@hmxlabs.com.br">contato@hmxlabs.com.br</a></p>
+                        </div>
+                    </div>
+
+                    <div class="info-item">
+                        <i class="fas fa-clock info-icon"></i>
+                        <div class="info-text">
+                            <h3>Horário de Atendimento</h3>
+                            <p>Segunda a Sexta: 8h às 18h<br>Sábado: 9h às 13h</p>
+                        </div>
+                    </div>
+
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+
+                <div class="contact-form">
+                    <form id="contactForm" onsubmit="submitForm(event)">
+                        <div class="form-group">
+                            <label for="name">Nome Completo</label>
+                            <input type="text" id="name" class="form-control" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" class="form-control" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="phone">Telefone</label>
+                            <input type="tel" id="phone" class="form-control">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="subject">Assunto</label>
+                            <select id="subject" class="form-control" required>
+                                <option value="">Selecione...</option>
+                                <option value="duvida">Dúvida</option>
+                                <option value="sugestao">Sugestão</option>
+                                <option value="reclamacao">Reclamação</option>
+                                <option value="elogio">Elogio</option>
+                                <option value="outro">Outro</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">Mensagem</label>
+                            <textarea id="message" class="form-control" required></textarea>
+                        </div>
+
+                        <button type="submit" class="submit-btn">ENVIAR MENSAGEM</button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="map-section">
+                <h2 class="map-title">ONDE ESTAMOS</h2>
+                <div class="map-container">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.376321781824!2d-46.65863482434272!3d-23.563495361703707!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce59c8da0aa315%3A0xd59f9431f2c9776a!2sAv.%20Paulista%2C%201000%20-%20Bela%20Vista%2C%20S%C3%A3o%20Paulo%20-%20SP%2C%2001310-100!5e0!3m2!1spt-BR!2sbr!4v1633456789012!5m2!1spt-BR!2sbr" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- rodapé -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-column">
+                <h3>HMX Labs</h3>
+                <p>Sua saúde é nosso compromisso. Produtos de alta qualidade para sua melhor performance.</p>
+            </div>
+
+            <div class="footer-column">
+                <h3>Links Rápidos</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="produtos.html">Produtos</a></li>
+                    <li><a href="quem-somos.html">Quem Somos</a></li>
+                    <li><a href="contato.html">Contato</a></li>
+                    <li><a href="politica-privacidade.html">Política de Privacidade</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h3>Formas de Pagamento</h3>
+                <ul>
+                    <li><i class="fas fa-credit-card"></i> Cartão de Crédito</li>
+                    <li><i class="fas fa-barcode"></i> Boleto Bancário</li>
+                    <li><i class="fas fa-pix"></i> Pix</li>
+                    <li><i class="fas fa-money-bill-wave"></i> Transferência Bancária</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p class="copyright">&copy; 2025 HMX Labs - Todos os direitos reservados. CNPJ: 12.345.678/0001-00</p>
+        </div>
+    </footer>
+
+    <script>
+        function submitForm(event) {
+            event.preventDefault();
+            
+            // Coletar dados do formulário
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const phone = document.getElementById('phone').value;
+            const subject = document.getElementById('subject').value;
+            const message = document.getElementById('message').value;
+            
+            // Aqui você pode adicionar o código para enviar o formulário
+            // para um servidor (usando fetch, axios, etc.) ou um serviço de email
+            
+            // Simulação de envio
+            console.log('Formulário enviado:', {name, email, phone, subject, message});
+            
+            alert('Mensagem enviada com sucesso! Entraremos em contato em breve.');
+            document.getElementById('contactForm').reset();
+            
+            // Retorna false para evitar o recarregamento da página
+            return false;
+        }
+    </script>
+</body>
+</html>
